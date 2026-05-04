@@ -8,7 +8,6 @@ const links = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#certificates", label: "Certificates" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -34,9 +33,6 @@ export const Navbar = () => {
         <a href="#home" className="flex items-center gap-2.5 font-display font-bold tracking-tight group">
           <span className="relative w-9 h-9 rounded-lg bg-gradient-accent grid place-items-center text-white text-mono text-sm shadow-glow group-hover:scale-110 transition-spring">
             DR
-          </span>
-          <span className="hidden sm:inline text-sm">
-            Dava<span className="text-accent">.</span>Pratama
           </span>
         </a>
 

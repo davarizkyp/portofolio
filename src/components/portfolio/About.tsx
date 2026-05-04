@@ -1,30 +1,34 @@
-import { GraduationCap, Lightbulb, Cog, Compass } from "lucide-react";
+import { GraduationCap, BookOpen, FlaskConical, Factory } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
-const cards = [
-  {
-    icon: Lightbulb,
-    title: "Who I Am",
-    body: "I'm an Automation Engineering student at Diponegoro University with a real curiosity for how machines think — from sensor signals on the field to logic running inside a PLC. I enjoy turning messy real-world problems into clean, repeatable control logic.",
-    accent: "accent",
-  },
+const steps = [
   {
     icon: GraduationCap,
-    title: "Academic Background",
-    body: "Bachelor of Applied Engineering (D4) — Automation Engineering. My coursework spans instrumentation, process control, electrical systems, and embedded programming, paired with extensive lab work.",
+    step: "01",
+    title: "Academic Foundation",
+    body: "I'm pursuing a Bachelor of Applied Engineering (D4) in Automation Engineering at Diponegoro University — a program built around the practical realities of industrial control and instrumentation.",
     accent: "accent",
   },
   {
-    icon: Cog,
-    title: "What I Work On",
-    body: "PLC programming (CODESYS, EcoStruxure, CX-Programmer), HMI/SCADA development with LabVIEW, instrumentation loops, and DCS integration. I've worked on real plant projects during internships at Pertamina RU VI and Semen Bima.",
+    icon: BookOpen,
+    step: "02",
+    title: "What I Studied",
+    body: "Coursework and labs covering PLC programming, HMI/SCADA development, process control, and electrical design fundamentals — paired with regular hands-on work on real hardware.",
+    accent: "accent",
+  },
+  {
+    icon: FlaskConical,
+    step: "03",
+    title: "Lab Assistant Role",
+    body: "As a Lab Assistant for the Industrial Instrumentation & Process Control lab, I guide fellow students through PLC programming, LabVIEW data acquisition, and Festo MPS sessions — which constantly sharpens my own technical understanding.",
     accent: "warm",
   },
   {
-    icon: Compass,
-    title: "Where I'm Heading",
-    body: "Looking for opportunities to grow inside engineering teams that build automation for energy, manufacturing, or process industries — places where reliability, safety, and clear thinking actually matter.",
+    icon: Factory,
+    step: "04",
+    title: "Toward Industry",
+    body: "Internships at Pertamina RU VI and Semen Bima connected my academic learning to actual plant systems. Today I'm focused on bridging that academic-to-industry gap — building automation that runs reliably in the real world.",
     accent: "warm",
   },
 ];
@@ -37,16 +41,15 @@ export const About = () => {
         <Reveal>
           <SectionHeading
             eyebrow="01 / About"
-            title="Engineering is my way of thinking."
-            description="A short look at who I am, what drives me, and where I want to go in industrial automation."
+            title="From classroom to control room."
+            description="A short look at how my path in automation engineering took shape — and where it's heading next."
           />
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-5">
-          {cards.map((c, i) => (
+          {steps.map((c, i) => (
             <Reveal key={c.title} delay={i * 100}>
               <div className="group relative h-full bg-surface-elevated border border-border rounded-2xl p-7 card-hover overflow-hidden">
-                {/* Glow on hover */}
                 <div
                   className="absolute -top-20 -right-20 w-48 h-48 rounded-full opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-700"
                   style={{
@@ -58,12 +61,17 @@ export const About = () => {
                   aria-hidden
                 />
                 <div className="relative">
-                  <div
-                    className={`w-12 h-12 rounded-xl grid place-items-center mb-5 border border-border ${
-                      c.accent === "warm" ? "bg-gradient-warm" : "bg-gradient-accent"
-                    }`}
-                  >
-                    <c.icon className="w-5 h-5 text-white" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div
+                      className={`w-12 h-12 rounded-xl grid place-items-center border border-border ${
+                        c.accent === "warm" ? "bg-gradient-warm" : "bg-gradient-accent"
+                      }`}
+                    >
+                      <c.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-mono text-xs text-muted-foreground tracking-widest">
+                      {c.step}
+                    </span>
                   </div>
                   <h3 className="font-display text-xl font-semibold mb-3">{c.title}</h3>
                   <p className="text-muted-foreground leading-relaxed text-[15px]">{c.body}</p>
