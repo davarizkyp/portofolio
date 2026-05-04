@@ -30,10 +30,8 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container-custom flex items-center justify-between h-16">
-        <a href="#home" className="flex items-center gap-2.5 font-display font-bold tracking-tight group">
-          <span className="relative w-9 h-9 rounded-lg bg-gradient-accent grid place-items-center text-white text-mono text-sm shadow-glow group-hover:scale-110 transition-spring">
-            DR
-          </span>
+        <a href="#home" className="flex items-center gap-2.5 font-display font-bold tracking-tight group" aria-label="Home">
+          <span className="sr-only">Home</span>
         </a>
 
         <div className="hidden md:flex items-center gap-1 glass rounded-full px-2 py-1.5">

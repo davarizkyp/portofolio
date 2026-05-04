@@ -46,7 +46,7 @@ export const Contact = () => {
       toast.success("Message ready! Opening your email client…");
       const f = e.currentTarget;
       const fd = new FormData(f);
-      const subject = encodeURIComponent(`Portfolio Contact — ${fd.get("name")}`);
+      const subject = encodeURIComponent(`Portfolio Contact from ${fd.get("name")}`);
       const body = encodeURIComponent(
         `From: ${fd.get("name")} <${fd.get("email")}>\n\n${fd.get("message")}`
       );
@@ -60,9 +60,9 @@ export const Contact = () => {
       <div className="container-custom">
         <Reveal>
           <SectionHeading
-            eyebrow="06 / Contact"
+            eyebrow="Contact"
             title="Let's build something reliable."
-            description="Open to internships, entry-level automation roles, and project collaborations."
+            description="Open to internships, entry level automation roles, and project collaborations."
           />
         </Reveal>
 

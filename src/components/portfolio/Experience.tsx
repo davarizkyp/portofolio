@@ -18,11 +18,11 @@ const items: Item[] = [
   {
     type: "Internship",
     icon: Briefcase,
-    period: "Jan 2026 – Feb 2026",
-    role: "Maintenance Execution — Instrument Maintenance Area 1",
+    period: "Jan 2026 to Feb 2026",
+    role: "Maintenance Execution, Instrument Maintenance Area 1",
     org: "PT. Kilang Pertamina Internasional RU VI · Indramayu",
     description:
-      "Supported installation of Orifice & Flow Transmitters for Slop Oil Mass Balance — covering MOC, P&ID analysis, sizing, DCS hook-up, and loop drawings. Resolved field-vs-DCS discrepancies through gain/bias adjustments.",
+      "Supported installation of Orifice & Flow Transmitters for Slop Oil Mass Balance, covering MOC, P&ID analysis, sizing, DCS hook-up, and loop drawings. Resolved field versus DCS discrepancies through gain/bias adjustments.",
     tools: ["P&ID", "DCS", "Flow Transmitter", "Calibration"],
     impact:
       "Learned how an instrumentation project moves from paperwork to a live, calibrated loop in a refinery environment.",
@@ -30,20 +30,20 @@ const items: Item[] = [
   {
     type: "Lab Assistant",
     icon: FlaskConical,
-    period: "Feb 2026 – Present",
+    period: "Feb 2026 to Present",
     role: "Industrial Instrumentation & Process Control Lab Assistant",
     org: "Diponegoro University · Semarang",
     description:
       "Guide students through LabVIEW + Arduino data acquisition systems and PLC programming on the Festo MPS Separating Station using CODESYS.",
     tools: ["LabVIEW", "Arduino", "CODESYS", "Festo MPS"],
     impact:
-      "Strengthened my own grasp of control fundamentals by teaching them — explaining a concept is the fastest way to truly own it.",
+      "Strengthened my own grasp of control fundamentals by teaching them. Explaining a concept is the fastest way to truly own it.",
   },
   {
     type: "Internship",
     icon: Briefcase,
-    period: "Jul 2025 – Aug 2025",
-    role: "Electrical Department — Instrumentation Division",
+    period: "Jul 2025 to Aug 2025",
+    role: "Electrical Department, Instrumentation Division",
     org: "PT. Sinar Tambang Arthalestari (Semen Bima) · Banyumas",
     description:
       "Performed PDCA-cycle inspections, instrumentation maintenance on plant machinery, and PLC troubleshooting for production lines.",
@@ -54,8 +54,8 @@ const items: Item[] = [
   {
     type: "Organization",
     icon: Users,
-    period: "Apr 2025 – Present",
-    role: "Head of Sports Division — HIMATRO",
+    period: "Apr 2025 to Present",
+    role: "Head of Sports Division, HIMATRO",
     org: "Automation Engineering Student Association",
     description:
       "Lead the Automation Futsal Cup involving 24 schools and supervise 8 staff members executing departmental work programs.",
@@ -65,8 +65,8 @@ const items: Item[] = [
   {
     type: "Organization",
     icon: Users,
-    period: "Feb 2025 – Present",
-    role: "Head of External Diplomacy — IWAKMAS UNDIP",
+    period: "Feb 2025 to Present",
+    role: "Head of External Diplomacy, IWAKMAS UNDIP",
     org: "Banyumas Student Regional Organization",
     description:
       "Build partnerships with external student organizations and led a Mangrove Planting project with 100+ volunteers in Semarang.",
@@ -82,7 +82,7 @@ export const Experience = () => {
       <div className="container-custom relative">
         <Reveal>
           <SectionHeading
-            eyebrow="04 / Experience"
+            eyebrow="Experience"
             title="Where I've worked and grown."
             description="Internships, lab work, and leadership roles that shaped how I approach engineering."
           />
