@@ -124,13 +124,13 @@ export const Projects = () => {
                     <div className="space-y-3 mb-5 flex-1">
                       <div>
                         <div className="text-[10px] text-mono text-muted-foreground uppercase tracking-widest mb-1">
-                          Problem
+                          ▸ Problem
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed">{p.problem}</p>
                       </div>
                       <div>
                         <div className="text-[10px] text-mono text-accent uppercase tracking-widest mb-1">
-                          What I Built
+                          ▸ What I Built
                         </div>
                         <p className="text-sm text-foreground/90 leading-relaxed">{p.built}</p>
                       </div>

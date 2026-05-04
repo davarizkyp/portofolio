@@ -8,7 +8,9 @@ type Item = {
   period: string;
   role: string;
   org: string;
-  paragraph: string;
+  description: string;
+  tools: string[];
+  impact: string;
   image?: string;
 };
 
@@ -18,27 +20,36 @@ const items: Item[] = [
     icon: Briefcase,
     period: "Jan 2026 to Feb 2026",
     role: "Maintenance Execution, Instrument Maintenance Area 1",
-    org: "PT. Kilang Pertamina Internasional RU VI, Indramayu",
-    paragraph:
-      "During this internship I supported the installation of orifice and flow transmitters for the Slop Oil Mass Balance project. My work covered Management of Change documentation, P&ID analysis, sizing calculations, DCS hook ups, and loop drawings, and I helped resolve discrepancies between field readings and DCS values through gain and bias adjustments. Working with P&ID, DCS, flow transmitters, and calibration tools, I learned how an instrumentation project moves from paperwork into a fully calibrated and live control loop in a refinery environment.",
+    org: "PT. Kilang Pertamina Internasional RU VI · Indramayu",
+    description:
+      "Supported installation of Orifice & Flow Transmitters for Slop Oil Mass Balance, covering MOC, P&ID analysis, sizing, DCS hook-up, and loop drawings. Resolved field versus DCS discrepancies through gain/bias adjustments.",
+    tools: ["P&ID", "DCS", "Flow Transmitter", "Calibration"],
+    impact:
+      "Learned how an instrumentation project moves from paperwork to a live, calibrated loop in a refinery environment.",
   },
   {
     type: "Lab Assistant",
     icon: FlaskConical,
     period: "Feb 2026 to Present",
     role: "Industrial Instrumentation & Process Control Lab Assistant",
-    org: "Diponegoro University, Semarang",
-    paragraph:
-      "As a laboratory assistant, I guide students through LabVIEW and Arduino based data acquisition systems and PLC programming on the Festo MPS Separating Station using CODESYS. By preparing modules and explaining control concepts in practical sessions, I have strengthened my own grasp of PLC logic, sensor integration, and HMI development, while also building communication and mentoring skills that translate well into engineering teamwork.",
+    org: "Diponegoro University · Semarang",
+    description:
+      "Guide students through LabVIEW + Arduino data acquisition systems and PLC programming on the Festo MPS Separating Station using CODESYS.",
+    tools: ["LabVIEW", "Arduino", "CODESYS", "Festo MPS"],
+    impact:
+      "Strengthened my own grasp of control fundamentals by teaching them. Explaining a concept is the fastest way to truly own it.",
   },
   {
     type: "Internship",
     icon: Briefcase,
     period: "Jul 2025 to Aug 2025",
     role: "Electrical Department, Instrumentation Division",
-    org: "PT. Sinar Tambang Arthalestari (Semen Bima), Banyumas",
-    paragraph:
-      "I performed PDCA cycle inspections, instrumentation maintenance on plant machinery, and PLC troubleshooting along the cement production line. Working with PLCs, field instruments, and standard maintenance procedures, I gained a first close up understanding of how automation and instrumentation work together to keep a continuous process plant running reliably across shifts.",
+    org: "PT. Sinar Tambang Arthalestari (Semen Bima) · Banyumas",
+    description:
+      "Performed PDCA-cycle inspections, instrumentation maintenance on plant machinery, and PLC troubleshooting for production lines.",
+    tools: ["PLC", "Instrumentation", "PDCA", "Maintenance"],
+    impact:
+      "Got a first close-up look at how automation actually keeps a continuous-process plant running shift after shift.",
   },
   {
     type: "Organization",
@@ -46,8 +57,10 @@ const items: Item[] = [
     period: "Apr 2025 to Present",
     role: "Head of Sports Division, HIMATRO",
     org: "Automation Engineering Student Association",
-    paragraph:
-      "I lead the Automation Futsal Cup, a tournament involving 24 schools, and supervise eight staff members responsible for executing the division's work programs. Through coordination tools, scheduling, and team meetings, I have developed leadership, planning, and decision making skills that complement my technical background as an engineering student.",
+    description:
+      "Lead the Automation Futsal Cup involving 24 schools and supervise 8 staff members executing departmental work programs.",
+    tools: ["Leadership", "Event Mgmt", "Coordination"],
+    impact: "Built my ability to lead a team, plan logistics, and deliver under deadlines.",
   },
   {
     type: "Organization",
@@ -55,8 +68,10 @@ const items: Item[] = [
     period: "Feb 2025 to Present",
     role: "Head of External Diplomacy, IWAKMAS UNDIP",
     org: "Banyumas Student Regional Organization",
-    paragraph:
-      "In this role I build partnerships with external student organizations and led a Mangrove Planting project that mobilized more than one hundred volunteers in Semarang. The experience sharpened my cross team communication, stakeholder management, and ability to deliver collaborative projects from initial planning through execution.",
+    description:
+      "Build partnerships with external student organizations and led a Mangrove Planting project with 100+ volunteers in Semarang.",
+    tools: ["Partnerships", "Project Mgmt", "Communication"],
+    impact: "Sharpened cross-team communication and stakeholder management.",
   },
 ];
 
@@ -110,9 +125,32 @@ export const Experience = () => {
                   </h3>
                   <div className="text-sm text-accent text-mono mt-1 mb-4">{it.org}</div>
 
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {it.paragraph}
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    {it.description}
                   </p>
+
+                  <div className="mb-4">
+                    <div className="text-[10px] text-mono text-muted-foreground uppercase tracking-widest mb-2">
+                      ▸ Tools & Technologies
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {it.tools.map((t) => (
+                        <span
+                          key={t}
+                          className="px-2.5 py-1 text-[11px] text-mono bg-secondary/80 text-secondary-foreground rounded-md border border-border hover:border-accent/40 hover:text-accent transition-colors"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-auto pt-4 border-t border-border">
+                    <div className="text-[10px] text-mono text-accent uppercase tracking-widest mb-1">
+                      ▸ Impact / What I Learned
+                    </div>
+                    <p className="text-sm text-foreground/90 leading-relaxed">{it.impact}</p>
+                  </div>
                 </div>
               </article>
             </Reveal>
