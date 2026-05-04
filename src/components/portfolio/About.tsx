@@ -7,28 +7,28 @@ const steps = [
     icon: GraduationCap,
     step: "01",
     title: "Academic Foundation",
-    body: "I'm pursuing a Bachelor of Applied Engineering (D4) in Automation Engineering at Diponegoro University — a program built around the practical realities of industrial control and instrumentation.",
+    body: "I'm pursuing a Bachelor of Applied Engineering (D4) in Automation Engineering at Diponegoro University, a program built around the practical realities of industrial control and instrumentation.",
     accent: "accent",
   },
   {
     icon: BookOpen,
     step: "02",
     title: "What I Studied",
-    body: "Coursework and labs covering PLC programming, HMI/SCADA development, process control, and electrical design fundamentals — paired with regular hands-on work on real hardware.",
+    body: "Coursework and labs covering PLC programming, HMI/SCADA development, process control, and electrical design fundamentals, paired with regular hands-on work on real hardware.",
     accent: "accent",
   },
   {
     icon: FlaskConical,
     step: "03",
     title: "Lab Assistant Role",
-    body: "As a Lab Assistant for the Industrial Instrumentation & Process Control lab, I guide fellow students through PLC programming, LabVIEW data acquisition, and Festo MPS sessions — which constantly sharpens my own technical understanding.",
+    body: "As a Lab Assistant for the Industrial Instrumentation & Process Control lab, I guide fellow students through PLC programming, LabVIEW data acquisition, and Festo MPS sessions, which constantly sharpens my own technical understanding.",
     accent: "warm",
   },
   {
     icon: Factory,
     step: "04",
     title: "Toward Industry",
-    body: "Internships at Pertamina RU VI and Semen Bima connected my academic learning to actual plant systems. Today I'm focused on bridging that academic-to-industry gap — building automation that runs reliably in the real world.",
+    body: "Internships at Pertamina RU VI and Semen Bima connected my academic learning to actual plant systems. Today I'm focused on bridging that academic to industry gap, building automation that runs reliably in the real world.",
     accent: "warm",
   },
 ];
@@ -40,9 +40,9 @@ export const About = () => {
       <div className="container-custom relative">
         <Reveal>
           <SectionHeading
-            eyebrow="01 / About"
+            eyebrow="About"
             title="From classroom to control room."
-            description="A short look at how my path in automation engineering took shape — and where it's heading next."
+            description="A short look at how my path in automation engineering took shape, and where it's heading next."
           />
         </Reveal>
 

@@ -56,9 +56,9 @@ export const Skills = () => {
       <div className="container-custom relative">
         <Reveal>
           <SectionHeading
-            eyebrow="02 / Skills"
+            eyebrow="Skills"
             title="A full-stack automation toolkit."
-            description="From the field instrument up to the SCADA dashboard — here's what I work with."
+            description="From the field instrument up to the SCADA dashboard, here's what I work with."
           />
         </Reveal>
 

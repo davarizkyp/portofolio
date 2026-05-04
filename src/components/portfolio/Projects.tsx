@@ -10,9 +10,9 @@ const projects = [
     year: "2026",
     icon: Gauge,
     category: "Instrumentation",
-    title: "Orifice Flowmeter — Slop Oil Line",
+    title: "Orifice Flowmeter for Slop Oil Line",
     problem: "Plant needed accurate slop oil mass balance measurement at Unit 23/24.",
-    built: "Designed and integrated an orifice flowmeter system end-to-end: P&ID review, sizing per ISO 5167 / API MPMS, hook-up drawings, and DCS signal loop.",
+    built: "Designed and integrated an orifice flowmeter system end to end: P&ID review, sizing per ISO 5167 / API MPMS, hook-up drawings, and DCS signal loop.",
     tools: ["P&ID", "ISO 5167", "API MPMS", "DCS"],
     image: p2,
     featured: true,
@@ -23,7 +23,7 @@ const projects = [
     category: "Control System",
     title: "Automatic Water Level Control",
     problem: "Two tanks needed to be balanced and monitored without manual intervention.",
-    built: "Dual-tank automatic control using Arduino, ultrasonic sensors, and solenoid valves — all visualized through a custom LabVIEW HMI for live monitoring.",
+    built: "Dual-tank automatic control using Arduino, ultrasonic sensors, and solenoid valves, all visualized through a custom LabVIEW HMI for live monitoring.",
     tools: ["Arduino", "LabVIEW", "Ultrasonic", "HMI"],
     image: p3,
   },
@@ -31,9 +31,9 @@ const projects = [
     year: "2025",
     icon: Thermometer,
     category: "Process Control",
-    title: "Automatic Heater + LabVIEW HMI",
+    title: "Automatic Heater with LabVIEW HMI",
     problem: "Required precise temperature regulation with two interchangeable interfaces.",
-    built: "Closed-loop temperature controller using Arduino, thermocouple, and SSR — with bidirectional setpoint control across LabVIEW and Arduino IDE.",
+    built: "Closed-loop temperature controller using Arduino, thermocouple, and SSR, with bidirectional setpoint control across LabVIEW and Arduino IDE.",
     tools: ["Arduino", "Thermocouple", "SSR", "LabVIEW"],
     image: p1,
   },
@@ -53,7 +53,7 @@ const projects = [
     category: "PID & PWM",
     title: "DC Motor Speed Control",
     problem: "Motor speed needed to stay stable under varying loads.",
-    built: "Implemented PID + PWM speed control in MATLAB Simulink integrated with Arduino — tuned for stable response across load disturbances.",
+    built: "Implemented PID + PWM speed control in MATLAB Simulink integrated with Arduino, tuned for stable response across load disturbances.",
     tools: ["Simulink", "Arduino", "PID", "PWM"],
     image: p3,
   },
@@ -66,9 +66,9 @@ export const Projects = () => {
       <div className="container-custom relative">
         <Reveal>
           <SectionHeading
-            eyebrow="03 / Projects"
+            eyebrow="Projects"
             title="Things I've built and solved."
-            description="A selection of plant, academic, and personal automation projects — focused on what was actually engineered."
+            description="A selection of plant, academic, and personal automation projects, focused on what was actually engineered."
           />
         </Reveal>
 

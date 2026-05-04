@@ -22,14 +22,6 @@ export const Hero = () => {
 
       <div className="container-custom relative grid md:grid-cols-5 gap-12 items-center">
         <div className="md:col-span-3 space-y-7">
-          <div className="fade-in inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs text-mono text-muted-foreground">
-            <span className="relative flex w-2 h-2">
-              <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75" />
-              <span className="relative w-2 h-2 rounded-full bg-accent" />
-            </span>
-            Open to Internship & Entry-Level Roles
-          </div>
-
           <div className="fade-in fade-in-delay-1 space-y-2">
             <div className="flex items-center gap-3 text-mono text-xs text-accent uppercase tracking-[0.25em]">
               <span className="h-px w-10 bg-accent" />
@@ -50,8 +42,8 @@ export const Hero = () => {
           </h2>
 
           <p className="fade-in fade-in-delay-3 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Passionate about industrial automation and control systems —
-            translating sensor data and field signals into reliable PLC,
+            Passionate about industrial automation and control systems.
+            Translating sensor data and field signals into reliable PLC,
             SCADA, and instrumentation solutions through hands-on technical
             learning and real plant experience.
           </p>
