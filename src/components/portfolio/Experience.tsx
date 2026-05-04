@@ -1,19 +1,31 @@
-import { Briefcase, Users, FlaskConical } from "lucide-react";
+import { Briefcase, Users, FlaskConical, ImageIcon } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
-const items = [
+type Item = {
+  type: string;
+  icon: typeof Briefcase;
+  period: string;
+  role: string;
+  org: string;
+  description: string;
+  tools: string[];
+  impact: string;
+  image?: string;
+};
+
+const items: Item[] = [
   {
     type: "Internship",
     icon: Briefcase,
     period: "Jan 2026 – Feb 2026",
     role: "Maintenance Execution — Instrument Maintenance Area 1",
     org: "PT. Kilang Pertamina Internasional RU VI · Indramayu",
-    points: [
-      "Assisted installation of Orifice & Flow Transmitters for Slop Oil Mass Balance — full workflow from MOC, P&ID analysis, sizing, to DCS hook-up & loop drawings.",
-      "Resolved field-vs-DCS discrepancies via gain/bias adjustments to ensure data accuracy.",
-      "Performed inspection, calibration, and maintenance on sensors, transmitters, and valves.",
-    ],
+    description:
+      "Supported installation of Orifice & Flow Transmitters for Slop Oil Mass Balance — covering MOC, P&ID analysis, sizing, DCS hook-up, and loop drawings. Resolved field-vs-DCS discrepancies through gain/bias adjustments.",
+    tools: ["P&ID", "DCS", "Flow Transmitter", "Calibration"],
+    impact:
+      "Learned how an instrumentation project moves from paperwork to a live, calibrated loop in a refinery environment.",
   },
   {
     type: "Lab Assistant",
@@ -21,10 +33,11 @@ const items = [
     period: "Feb 2026 – Present",
     role: "Industrial Instrumentation & Process Control Lab Assistant",
     org: "Diponegoro University · Semarang",
-    points: [
-      "Guided students in LabVIEW + Arduino data acquisition systems.",
-      "Instructed PLC programming using Festo MPS Separating Station with CODESYS.",
-    ],
+    description:
+      "Guide students through LabVIEW + Arduino data acquisition systems and PLC programming on the Festo MPS Separating Station using CODESYS.",
+    tools: ["LabVIEW", "Arduino", "CODESYS", "Festo MPS"],
+    impact:
+      "Strengthened my own grasp of control fundamentals by teaching them — explaining a concept is the fastest way to truly own it.",
   },
   {
     type: "Internship",
@@ -32,11 +45,11 @@ const items = [
     period: "Jul 2025 – Aug 2025",
     role: "Electrical Department — Instrumentation Division",
     org: "PT. Sinar Tambang Arthalestari (Semen Bima) · Banyumas",
-    points: [
-      "Implemented PDCA cycle inspections prior to maintenance activities.",
-      "Performed instrumentation maintenance on industrial machinery components.",
-      "Troubleshot PLC systems controlling industrial automation processes.",
-    ],
+    description:
+      "Performed PDCA-cycle inspections, instrumentation maintenance on plant machinery, and PLC troubleshooting for production lines.",
+    tools: ["PLC", "Instrumentation", "PDCA", "Maintenance"],
+    impact:
+      "Got a first close-up look at how automation actually keeps a continuous-process plant running shift after shift.",
   },
   {
     type: "Organization",
@@ -44,10 +57,10 @@ const items = [
     period: "Apr 2025 – Present",
     role: "Head of Sports Division — HIMATRO",
     org: "Automation Engineering Student Association",
-    points: [
-      "Led the Automation Futsal Cup involving 24 schools.",
-      "Supervised 8 staff members executing departmental work programs.",
-    ],
+    description:
+      "Lead the Automation Futsal Cup involving 24 schools and supervise 8 staff members executing departmental work programs.",
+    tools: ["Leadership", "Event Mgmt", "Coordination"],
+    impact: "Built my ability to lead a team, plan logistics, and deliver under deadlines.",
   },
   {
     type: "Organization",
@@ -55,10 +68,10 @@ const items = [
     period: "Feb 2025 – Present",
     role: "Head of External Diplomacy — IWAKMAS UNDIP",
     org: "Banyumas Student Regional Organization",
-    points: [
-      "Built partnerships with external student organizations.",
-      "Led a Mangrove Planting project with 100+ volunteers in Semarang.",
-    ],
+    description:
+      "Build partnerships with external student organizations and led a Mangrove Planting project with 100+ volunteers in Semarang.",
+    tools: ["Partnerships", "Project Mgmt", "Communication"],
+    impact: "Sharpened cross-team communication and stakeholder management.",
   },
 ];
 
@@ -70,49 +83,78 @@ export const Experience = () => {
         <Reveal>
           <SectionHeading
             eyebrow="04 / Experience"
-            title="A timeline of work and growth."
-            description="Internships, lab work, and leadership roles shaping how I approach engineering."
+            title="Where I've worked and grown."
+            description="Internships, lab work, and leadership roles that shaped how I approach engineering."
           />
         </Reveal>
 
-        <div className="relative max-w-3xl mx-auto">
-          <div
-            className="absolute left-4 md:left-6 top-2 bottom-2 w-px"
-            style={{ background: "linear-gradient(180deg, hsl(var(--accent)) 0%, hsl(var(--border)) 30%, hsl(var(--border)) 70%, hsl(var(--accent-warm)) 100%)" }}
-            aria-hidden
-          />
-
-          <div className="space-y-6">
-            {items.map((it, i) => (
-              <Reveal key={i} delay={i * 80}>
-                <div className="relative pl-12 md:pl-16">
-                  <div className="absolute left-0 md:left-2 top-2 w-9 h-9 rounded-xl bg-gradient-accent grid place-items-center shadow-glow ring-4 ring-background">
-                    <it.icon className="w-4 h-4 text-white" />
-                  </div>
-                  <div className="bg-surface-elevated border border-border rounded-2xl p-6 card-hover">
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="text-[10px] text-mono px-2.5 py-1 bg-gradient-accent text-white rounded-md uppercase tracking-wider font-semibold">
-                        {it.type}
-                      </span>
-                      <span className="text-xs text-mono text-muted-foreground">
-                        {it.period}
+        <div className="grid md:grid-cols-2 gap-6">
+          {items.map((it, i) => (
+            <Reveal key={i} delay={(i % 2) * 100}>
+              <article className="group relative h-full bg-surface-elevated border border-border rounded-2xl overflow-hidden card-hover flex flex-col">
+                <div className="relative aspect-[16/9] bg-gradient-to-br from-secondary to-surface border-b border-border grid place-items-center overflow-hidden">
+                  <div className="absolute inset-0 grid-pattern opacity-30" aria-hidden />
+                  {it.image ? (
+                    <img src={it.image} alt={it.role} className="w-full h-full object-cover" loading="lazy" />
+                  ) : (
+                    <div className="relative flex flex-col items-center gap-2 text-muted-foreground">
+                      <ImageIcon className="w-8 h-8 opacity-50" />
+                      <span className="text-mono text-[10px] uppercase tracking-widest opacity-60">
+                        Image Placeholder
                       </span>
                     </div>
-                    <h3 className="font-display text-lg font-semibold leading-snug">{it.role}</h3>
-                    <div className="text-sm text-accent mb-4 text-mono">{it.org}</div>
-                    <ul className="space-y-2">
-                      {it.points.map((p, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex gap-2.5 leading-relaxed">
-                          <span className="text-accent shrink-0 mt-0.5">▸</span>
-                          <span>{p}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  )}
+                  <div className="absolute top-4 left-4 flex items-center gap-2">
+                    <span className="text-[10px] text-mono px-2.5 py-1 bg-gradient-accent text-white rounded-md uppercase tracking-wider font-semibold">
+                      {it.type}
+                    </span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="glass text-[10px] text-mono px-2.5 py-1 rounded-md text-muted-foreground">
+                      {it.period}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 w-11 h-11 rounded-xl glass grid place-items-center group-hover:scale-110 transition-spring">
+                    <it.icon className="w-5 h-5 text-accent" />
                   </div>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="font-display text-lg font-semibold leading-snug group-hover:text-accent transition-colors">
+                    {it.role}
+                  </h3>
+                  <div className="text-sm text-accent text-mono mt-1 mb-4">{it.org}</div>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    {it.description}
+                  </p>
+
+                  <div className="mb-4">
+                    <div className="text-[10px] text-mono text-muted-foreground uppercase tracking-widest mb-2">
+                      ▸ Tools & Technologies
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {it.tools.map((t) => (
+                        <span
+                          key={t}
+                          className="px-2.5 py-1 text-[11px] text-mono bg-secondary/80 text-secondary-foreground rounded-md border border-border hover:border-accent/40 hover:text-accent transition-colors"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-auto pt-4 border-t border-border">
+                    <div className="text-[10px] text-mono text-accent uppercase tracking-widest mb-1">
+                      ▸ Impact / What I Learned
+                    </div>
+                    <p className="text-sm text-foreground/90 leading-relaxed">{it.impact}</p>
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
