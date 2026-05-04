@@ -30,22 +30,22 @@ export const Hero = () => {
             <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-[0.95]">
               <span className="text-gradient">Dava Rizky</span>
               <br />
-              <span className="shimmer-text">Pratama.</span>
+              <span className="shimmer-text">Pratama</span>
             </h1>
           </div>
 
           <h2 className="fade-in fade-in-delay-2 font-display text-xl md:text-2xl text-muted-foreground">
-            Aspiring{" "}
             <span className="text-foreground font-semibold">
-              Industrial Automation Engineer
+              Automation &amp; Control Systems Engineer
             </span>
           </h2>
 
           <p className="fade-in fade-in-delay-3 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Passionate about industrial automation and control systems.
-            Translating sensor data and field signals into reliable PLC,
-            SCADA, and instrumentation solutions through hands-on technical
-            learning and real plant experience.
+            Automation engineering student with hands-on experience in industrial
+            instrumentation, control systems, and plant maintenance. Experienced
+            in working with PLC, SCADA, and field instruments through internships
+            and laboratory practice, with a strong focus on applying engineering
+            concepts into real industrial systems.
           </p>
 
           <div className="fade-in fade-in-delay-4 flex flex-wrap gap-3 pt-2">
@@ -86,10 +86,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-mono text-[10px] text-muted-foreground tracking-widest flex flex-col items-center gap-2 fade-in fade-in-delay-5">
-        <span>SCROLL</span>
-        <span className="w-px h-8 bg-gradient-to-b from-accent to-transparent" />
-      </div>
     </section>
   );
 };
