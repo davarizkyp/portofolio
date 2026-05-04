@@ -15,17 +15,21 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'Inter', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-accent': 'var(--gradient-accent)',
+        'gradient-warm': 'var(--gradient-warm)',
         'gradient-surface': 'var(--gradient-surface)',
+        'gradient-border': 'var(--gradient-border)',
       },
       boxShadow: {
         'elegant': 'var(--shadow-md)',
         'elevated': 'var(--shadow-lg)',
         'glow': 'var(--shadow-glow)',
+        'warm': 'var(--shadow-warm)',
       },
       colors: {
         surface: {
