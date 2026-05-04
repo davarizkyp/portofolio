@@ -1,37 +1,5 @@
-import { GraduationCap, BookOpen, FlaskConical, Factory } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
-
-const steps = [
-  {
-    icon: GraduationCap,
-    step: "01",
-    title: "Academic Foundation",
-    body: "I'm pursuing a Bachelor of Applied Engineering (D4) in Automation Engineering at Diponegoro University, a program built around the practical realities of industrial control and instrumentation.",
-    accent: "accent",
-  },
-  {
-    icon: BookOpen,
-    step: "02",
-    title: "What I Studied",
-    body: "Coursework and labs covering PLC programming, HMI/SCADA development, process control, and electrical design fundamentals, paired with regular hands-on work on real hardware.",
-    accent: "accent",
-  },
-  {
-    icon: FlaskConical,
-    step: "03",
-    title: "Lab Assistant Role",
-    body: "As a Lab Assistant for the Industrial Instrumentation & Process Control lab, I guide fellow students through PLC programming, LabVIEW data acquisition, and Festo MPS sessions, which constantly sharpens my own technical understanding.",
-    accent: "warm",
-  },
-  {
-    icon: Factory,
-    step: "04",
-    title: "Toward Industry",
-    body: "Internships at Pertamina RU VI and Semen Bima connected my academic learning to actual plant systems. Today I'm focused on bridging that academic to industry gap, building automation that runs reliably in the real world.",
-    accent: "warm",
-  },
-];
 
 export const About = () => {
   return (
@@ -46,39 +14,52 @@ export const About = () => {
           />
         </Reveal>
 
-        <div className="grid md:grid-cols-2 gap-5">
-          {steps.map((c, i) => (
-            <Reveal key={c.title} delay={i * 100}>
-              <div className="group relative h-full bg-surface-elevated border border-border rounded-2xl p-7 card-hover overflow-hidden">
-                <div
-                  className="absolute -top-20 -right-20 w-48 h-48 rounded-full opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-700"
-                  style={{
-                    background:
-                      c.accent === "warm"
-                        ? "hsl(var(--accent-warm) / 0.25)"
-                        : "hsl(var(--accent) / 0.25)",
-                  }}
-                  aria-hidden
-                />
-                <div className="relative">
-                  <div className="flex items-center justify-between mb-5">
-                    <div
-                      className={`w-12 h-12 rounded-xl grid place-items-center border border-border ${
-                        c.accent === "warm" ? "bg-gradient-warm" : "bg-gradient-accent"
-                      }`}
-                    >
-                      <c.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="text-mono text-xs text-muted-foreground tracking-widest">
-                      {c.step}
-                    </span>
-                  </div>
-                  <h3 className="font-display text-xl font-semibold mb-3">{c.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed text-[15px]">{c.body}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+        <div className="max-w-3xl mx-auto space-y-6 text-[15px] md:text-base text-muted-foreground leading-relaxed">
+          <Reveal>
+            <p>
+              I am currently pursuing a Bachelor of Applied Engineering (D4)
+              in Automation Engineering at Diponegoro University, a program
+              focused on the practical side of industrial control and
+              instrumentation.
+            </p>
+          </Reveal>
+          <Reveal delay={100}>
+            <p>
+              Throughout my studies I have built a solid foundation in PLC
+              programming, SCADA and HMI development, process control, and
+              electrical engineering fundamentals. Most of this learning happens
+              in laboratory sessions where I work directly with real hardware
+              rather than only on paper.
+            </p>
+          </Reveal>
+          <Reveal delay={200}>
+            <p>
+              As a Lab Assistant for the Industrial Instrumentation and Process
+              Control Laboratory, I guide fellow students through PLC
+              programming on the Festo MPS Separating Station using CODESYS,
+              and through LabVIEW based data acquisition systems with Arduino.
+              Teaching these topics has reinforced my own understanding of
+              control fundamentals and instrumentation workflows.
+            </p>
+          </Reveal>
+          <Reveal delay={300}>
+            <p>
+              On the industrial side, my internships at PT. Kilang Pertamina
+              Internasional RU VI Balongan and PT. Sinar Tambang Arthalestari
+              (Semen Bima) gave me direct exposure to live plant systems,
+              including instrumentation installation, calibration, DCS hook
+              ups, PLC troubleshooting, and routine maintenance on production
+              lines.
+            </p>
+          </Reveal>
+          <Reveal delay={400}>
+            <p>
+              Today my focus is firmly on industrial automation. I want to keep
+              bridging the gap between academic theory and field reality by
+              designing and supporting control systems that run reliably in
+              real industrial environments.
+            </p>
+          </Reveal>
         </div>
       </div>
     </section>
