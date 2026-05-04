@@ -86,10 +86,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-mono text-[10px] text-muted-foreground tracking-widest flex flex-col items-center gap-2 fade-in fade-in-delay-5">
-        <span>SCROLL</span>
-        <span className="w-px h-8 bg-gradient-to-b from-accent to-transparent" />
-      </div>
     </section>
   );
 };
