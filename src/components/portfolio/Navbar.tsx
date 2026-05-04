@@ -26,24 +26,26 @@ export const Navbar = () => {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
+          ? "glass border-b border-border shadow-elegant"
           : "bg-transparent"
       }`}
     >
       <nav className="container-custom flex items-center justify-between h-16">
-        <a href="#home" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="w-8 h-8 rounded bg-primary text-primary-foreground grid place-items-center text-mono text-sm">
-            AE
+        <a href="#home" className="flex items-center gap-2.5 font-display font-bold tracking-tight group">
+          <span className="relative w-9 h-9 rounded-lg bg-gradient-accent grid place-items-center text-white text-mono text-sm shadow-glow group-hover:scale-110 transition-spring">
+            DR
           </span>
-          <span className="hidden sm:inline">Automation.Engineer</span>
+          <span className="hidden sm:inline text-sm">
+            Dava<span className="text-accent">.</span>Pratama
+          </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-7">
+        <div className="hidden md:flex items-center gap-1 glass rounded-full px-2 py-1.5">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-xs px-3 py-1.5 rounded-full text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors"
             >
               {l.label}
             </a>
@@ -51,8 +53,8 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button size="sm" variant="default" asChild>
-            <a href="/cv-placeholder.pdf" download>Download CV</a>
+          <Button size="sm" asChild className="bg-gradient-accent border-0 hover:opacity-90 shadow-glow">
+            <a href="/cv.pdf" download>Download CV</a>
           </Button>
         </div>
 
@@ -66,7 +68,7 @@ export const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <div className="container-custom py-4 flex flex-col gap-3">
             {links.map((l) => (
               <a
@@ -78,8 +80,8 @@ export const Navbar = () => {
                 {l.label}
               </a>
             ))}
-            <Button size="sm" asChild>
-              <a href="/cv-placeholder.pdf" download>Download CV</a>
+            <Button size="sm" asChild className="bg-gradient-accent border-0">
+              <a href="/cv.pdf" download>Download CV</a>
             </Button>
           </div>
         </div>

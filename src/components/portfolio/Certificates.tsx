@@ -13,29 +13,31 @@ const certs = [
 
 export const Certificates = () => {
   return (
-    <section id="certificates" className="section-padding bg-surface">
-      <div className="container-custom">
+    <section id="certificates" className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 grid-pattern opacity-25" aria-hidden />
+      <div className="container-custom relative">
         <Reveal>
           <SectionHeading
             eyebrow="05 / Certificates"
-            title="Training & professional development."
-            description="Placeholder list — replace with your actual certificate scans/PDFs."
+            title="Training & continuous learning."
+            description="Selected coursework and professional development. Replace with your actual certificate scans."
           />
         </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {certs.map((c, i) => (
             <Reveal key={c.name} delay={i * 60}>
-              <div className="group bg-surface-elevated border border-border rounded-xl p-5 hover:border-accent/40 transition-smooth">
-                <div className="aspect-[4/3] bg-secondary rounded-md mb-4 grid place-items-center border border-dashed border-border">
-                  <Award className="w-10 h-10 text-muted-foreground/50" />
+              <div className="group bg-surface-elevated border border-border rounded-2xl p-5 card-hover">
+                <div className="aspect-[4/3] bg-gradient-to-br from-secondary to-surface rounded-xl mb-4 grid place-items-center border border-dashed border-border relative overflow-hidden">
+                  <div className="absolute inset-0 grid-pattern opacity-30" aria-hidden />
+                  <Award className="relative w-12 h-12 text-accent/60 group-hover:text-accent group-hover:scale-110 transition-all duration-500" />
                 </div>
                 <div className="flex items-start justify-between gap-2">
                   <div>
-                    <h3 className="font-medium leading-snug text-sm">{c.name}</h3>
-                    <p className="text-xs text-muted-foreground mt-1">{c.issuer}</p>
+                    <h3 className="font-display font-semibold leading-snug text-sm">{c.name}</h3>
+                    <p className="text-xs text-muted-foreground mt-1 text-mono">{c.issuer}</p>
                   </div>
-                  <span className="text-[11px] text-mono text-muted-foreground">{c.year}</span>
+                  <span className="text-[10px] text-mono text-accent bg-accent/10 px-2 py-0.5 rounded">{c.year}</span>
                 </div>
               </div>
             </Reveal>

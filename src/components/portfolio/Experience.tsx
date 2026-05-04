@@ -64,40 +64,46 @@ const items = [
 
 export const Experience = () => {
   return (
-    <section id="experience" className="section-padding">
-      <div className="container-custom">
+    <section id="experience" className="section-padding bg-surface relative overflow-hidden">
+      <div className="absolute inset-0 dot-pattern opacity-30" aria-hidden />
+      <div className="container-custom relative">
         <Reveal>
           <SectionHeading
             eyebrow="04 / Experience"
-            title="Work, lab, and leadership timeline."
+            title="A timeline of work and growth."
+            description="Internships, lab work, and leadership roles shaping how I approach engineering."
           />
         </Reveal>
 
         <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-4 md:left-6 top-2 bottom-2 w-px bg-border" aria-hidden />
+          <div
+            className="absolute left-4 md:left-6 top-2 bottom-2 w-px"
+            style={{ background: "linear-gradient(180deg, hsl(var(--accent)) 0%, hsl(var(--border)) 30%, hsl(var(--border)) 70%, hsl(var(--accent-warm)) 100%)" }}
+            aria-hidden
+          />
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {items.map((it, i) => (
               <Reveal key={i} delay={i * 80}>
                 <div className="relative pl-12 md:pl-16">
-                  <div className="absolute left-0 md:left-2 top-1 w-8 h-8 rounded-lg bg-surface-elevated border border-border grid place-items-center shadow-sm">
-                    <it.icon className="w-4 h-4 text-accent" />
+                  <div className="absolute left-0 md:left-2 top-2 w-9 h-9 rounded-xl bg-gradient-accent grid place-items-center shadow-glow ring-4 ring-background">
+                    <it.icon className="w-4 h-4 text-white" />
                   </div>
-                  <div className="bg-surface-elevated border border-border rounded-xl p-5 hover:shadow-elegant transition-smooth">
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <span className="text-[11px] text-mono px-2 py-0.5 bg-secondary rounded uppercase tracking-wider">
+                  <div className="bg-surface-elevated border border-border rounded-2xl p-6 card-hover">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className="text-[10px] text-mono px-2.5 py-1 bg-gradient-accent text-white rounded-md uppercase tracking-wider font-semibold">
                         {it.type}
                       </span>
                       <span className="text-xs text-mono text-muted-foreground">
                         {it.period}
                       </span>
                     </div>
-                    <h3 className="font-semibold leading-snug">{it.role}</h3>
-                    <div className="text-sm text-muted-foreground mb-3">{it.org}</div>
-                    <ul className="space-y-1.5">
+                    <h3 className="font-display text-lg font-semibold leading-snug">{it.role}</h3>
+                    <div className="text-sm text-accent mb-4 text-mono">{it.org}</div>
+                    <ul className="space-y-2">
                       {it.points.map((p, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex gap-2">
-                          <span className="text-accent shrink-0">▸</span>
+                        <li key={idx} className="text-sm text-muted-foreground flex gap-2.5 leading-relaxed">
+                          <span className="text-accent shrink-0 mt-0.5">▸</span>
                           <span>{p}</span>
                         </li>
                       ))}
