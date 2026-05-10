@@ -57,7 +57,7 @@ export const Skills = () => {
         <Reveal>
           <SectionHeading
             eyebrow="Skills"
-            title="A full-stack automation toolkit."
+            title="A full stack automation toolkit."
             description="From the field instrument up to the SCADA dashboard, here's what I work with."
           />
         </Reveal>
