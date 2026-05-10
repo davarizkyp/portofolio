@@ -19,13 +19,13 @@ const categories = [
     icon: Radio,
     title: "Industrial Communication",
     color: "accent",
-    items: ["Modbus RTU/TCP", "MQTT", "DCS Loops", "4-20 mA Signaling", "Hook-up Drawings"],
+    items: ["Modbus RTU/TCP", "MQTT", "DCS Loops", "4 to 20 mA Signaling", "Hookup Drawings"],
   },
   {
     icon: Monitor,
     title: "HMI & SCADA",
     color: "warm",
-    items: ["LabVIEW", "Festo MPS", "Delphi 7", "Real-time Monitoring", "Data Acquisition"],
+    items: ["LabVIEW", "Festo MPS", "Delphi 7", "Real time Monitoring", "Data Acquisition"],
   },
 ];
 
@@ -57,7 +57,7 @@ export const Skills = () => {
         <Reveal>
           <SectionHeading
             eyebrow="Skills"
-            title="A full-stack automation toolkit."
+            title="A full stack automation toolkit."
             description="From the field instrument up to the SCADA dashboard, here's what I work with."
           />
         </Reveal>

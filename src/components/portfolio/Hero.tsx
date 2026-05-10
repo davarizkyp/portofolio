@@ -30,7 +30,7 @@ export const Hero = () => {
             <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-[0.95]">
               <span className="text-gradient">Dava Rizky</span>
               <br />
-              <span className="shimmer-text">Pratama.</span>
+              <span className="shimmer-text">Pratama</span>
             </h1>
           </div>
 
@@ -42,10 +42,7 @@ export const Hero = () => {
           </h2>
 
           <p className="fade-in fade-in-delay-3 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Passionate about industrial automation and control systems.
-            Translating sensor data and field signals into reliable PLC,
-            SCADA, and instrumentation solutions through hands-on technical
-            learning and real plant experience.
+            Automation engineering student with hands-on experience in industrial instrumentation, control systems, and plant maintenance. Experienced in working with PLC, SCADA, and field instruments through internships and laboratory practice, with a strong focus on applying engineering concepts into real industrial systems.
           </p>
 
           <div className="fade-in fade-in-delay-4 flex flex-wrap gap-3 pt-2">

@@ -11,8 +11,8 @@ const projects = [
     icon: Gauge,
     category: "Instrumentation",
     title: "Orifice Flowmeter for Slop Oil Line",
-    problem: "Plant needed accurate slop oil mass balance measurement at Unit 23/24.",
-    built: "Designed and integrated an orifice flowmeter system end to end: P&ID review, sizing per ISO 5167 / API MPMS, hook-up drawings, and DCS signal loop.",
+    description:
+      "The plant needed accurate slop oil mass balance measurement at Unit 23/24. I designed and integrated an orifice flowmeter system end to end, covering P&ID review, sizing per ISO 5167 and API MPMS, hookup drawings, and DCS signal loop integration.",
     tools: ["P&ID", "ISO 5167", "API MPMS", "DCS"],
     image: p2,
     featured: true,
@@ -22,8 +22,8 @@ const projects = [
     icon: Activity,
     category: "Control System",
     title: "Automatic Water Level Control",
-    problem: "Two tanks needed to be balanced and monitored without manual intervention.",
-    built: "Dual-tank automatic control using Arduino, ultrasonic sensors, and solenoid valves, all visualized through a custom LabVIEW HMI for live monitoring.",
+    description:
+      "Two tanks needed to be balanced and monitored without manual intervention. I built a dual tank automatic control system using Arduino, ultrasonic sensors, and solenoid valves, all visualized through a custom LabVIEW HMI for live monitoring and operator interaction.",
     tools: ["Arduino", "LabVIEW", "Ultrasonic", "HMI"],
     image: p3,
   },
@@ -32,8 +32,8 @@ const projects = [
     icon: Thermometer,
     category: "Process Control",
     title: "Automatic Heater with LabVIEW HMI",
-    problem: "Required precise temperature regulation with two interchangeable interfaces.",
-    built: "Closed-loop temperature controller using Arduino, thermocouple, and SSR, with bidirectional setpoint control across LabVIEW and Arduino IDE.",
+    description:
+      "This project required precise temperature regulation with two interchangeable interfaces. I developed a closed loop temperature controller using Arduino, thermocouple, and SSR, with bidirectional setpoint control across LabVIEW and Arduino IDE.",
     tools: ["Arduino", "Thermocouple", "SSR", "LabVIEW"],
     image: p1,
   },
@@ -42,8 +42,8 @@ const projects = [
     icon: RotateCw,
     category: "Motion Control",
     title: "Servo Position Control System",
-    problem: "Needed accurate, interactive angular positioning for a demo rig.",
-    built: "Servo position controller using Arduino paired with a Delphi-based desktop interface for real-time angle command and feedback.",
+    description:
+      "A demo rig needed accurate, interactive angular positioning. I built a servo position controller using Arduino paired with a Delphi based desktop interface for real time angle command and feedback.",
     tools: ["Arduino", "Delphi 7", "Servo"],
     image: p2,
   },
@@ -52,8 +52,8 @@ const projects = [
     icon: Cpu,
     category: "PID & PWM",
     title: "DC Motor Speed Control",
-    problem: "Motor speed needed to stay stable under varying loads.",
-    built: "Implemented PID + PWM speed control in MATLAB Simulink integrated with Arduino, tuned for stable response across load disturbances.",
+    description:
+      "A motor speed needed to stay stable under varying loads. I implemented PID and PWM speed control in MATLAB Simulink integrated with Arduino, tuned for stable response across load disturbances.",
     tools: ["Simulink", "Arduino", "PID", "PWM"],
     image: p3,
   },
@@ -121,19 +121,8 @@ export const Projects = () => {
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:rotate-12 transition-all shrink-0 mt-1" />
                     </div>
 
-                    <div className="space-y-3 mb-5 flex-1">
-                      <div>
-                        <div className="text-[10px] text-mono text-muted-foreground uppercase tracking-widest mb-1">
-                          ▸ Problem
-                        </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{p.problem}</p>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-mono text-accent uppercase tracking-widest mb-1">
-                          ▸ What I Built
-                        </div>
-                        <p className="text-sm text-foreground/90 leading-relaxed">{p.built}</p>
-                      </div>
+                    <div className="mb-5 flex-1">
+                      <p className="text-sm text-foreground/90 leading-relaxed">{p.description}</p>
                     </div>
 
                     <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border">
