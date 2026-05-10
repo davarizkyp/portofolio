@@ -121,19 +121,8 @@ export const Projects = () => {
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:rotate-12 transition-all shrink-0 mt-1" />
                     </div>
 
-                    <div className="space-y-3 mb-5 flex-1">
-                      <div>
-                        <div className="text-[10px] text-mono text-muted-foreground uppercase tracking-widest mb-1">
-                          ▸ Problem
-                        </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{p.problem}</p>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-mono text-accent uppercase tracking-widest mb-1">
-                          ▸ What I Built
-                        </div>
-                        <p className="text-sm text-foreground/90 leading-relaxed">{p.built}</p>
-                      </div>
+                    <div className="mb-5 flex-1">
+                      <p className="text-sm text-foreground/90 leading-relaxed">{p.description}</p>
                     </div>
 
                     <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border">
