@@ -143,7 +143,7 @@ export const Experience = () => {
 
                   <div className="mb-4">
                     <div className="text-[10px] text-mono text-muted-foreground uppercase tracking-widest mb-2">
-                      ▸ Tools & Technologies
+                      Tools and Technologies
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {it.tools.map((t) => (
@@ -159,7 +159,7 @@ export const Experience = () => {
 
                   <div className="mt-auto pt-4 border-t border-border">
                     <div className="text-[10px] text-mono text-accent uppercase tracking-widest mb-1">
-                      ▸ Impact / What I Learned
+                      Impact and What I Learned
                     </div>
                     <p className="text-sm text-foreground/90 leading-relaxed">{it.impact}</p>
                   </div>
