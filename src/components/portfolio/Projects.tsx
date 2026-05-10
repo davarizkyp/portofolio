@@ -1,6 +1,7 @@
 import { ArrowUpRight, Cpu, Gauge, Thermometer, Activity, RotateCw } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { ImageGallery } from "./ImageGallery";
 import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
@@ -14,7 +15,7 @@ const projects = [
     description:
       "The plant needed accurate slop oil mass balance measurement at Unit 23/24. I designed and integrated an orifice flowmeter system end to end, covering P&ID review, sizing per ISO 5167 and API MPMS, hookup drawings, and DCS signal loop integration.",
     tools: ["P&ID", "ISO 5167", "API MPMS", "DCS"],
-    image: p2,
+    images: ["/pertamina1.jpeg", "/pertamina2.jpeg", "/pertamina4.jpeg"],
     featured: true,
   },
   {
@@ -25,7 +26,8 @@ const projects = [
     description:
       "Two tanks needed to be balanced and monitored without manual intervention. I built a dual tank automatic control system using Arduino, ultrasonic sensors, and solenoid valves, all visualized through a custom LabVIEW HMI for live monitoring and operator interaction.",
     tools: ["Arduino", "LabVIEW", "Ultrasonic", "HMI"],
-    image: p3,
+    images: ["/labs1.jpeg", "/level1.jpeg"],
+    objectPositions: ["center 18%", "center 56%"],
   },
   {
     year: "2025",
@@ -35,7 +37,7 @@ const projects = [
     description:
       "This project required precise temperature regulation with two interchangeable interfaces. I developed a closed loop temperature controller using Arduino, thermocouple, and SSR, with bidirectional setpoint control across LabVIEW and Arduino IDE.",
     tools: ["Arduino", "Thermocouple", "SSR", "LabVIEW"],
-    image: p1,
+    images: ["/heater1.jpg", "/heater2.jpeg"],
   },
   {
     year: "2025",
@@ -45,7 +47,7 @@ const projects = [
     description:
       "A demo rig needed accurate, interactive angular positioning. I built a servo position controller using Arduino paired with a Delphi based desktop interface for real time angle command and feedback.",
     tools: ["Arduino", "Delphi 7", "Servo"],
-    image: p2,
+    images: ["/servo.jpeg"],
   },
   {
     year: "2024",
@@ -55,7 +57,7 @@ const projects = [
     description:
       "A motor speed needed to stay stable under varying loads. I implemented PID and PWM speed control in MATLAB Simulink integrated with Arduino, tuned for stable response across load disturbances.",
     tools: ["Simulink", "Arduino", "PID", "PWM"],
-    image: p3,
+    images: ["/pid.jpeg", p3],
   },
 ];
 
@@ -83,14 +85,14 @@ export const Projects = () => {
                   }`}
                 >
                   <div className={`relative overflow-hidden bg-secondary ${isFeatured ? "aspect-[2.4/1]" : "aspect-video"}`}>
-                    <img
-                      src={p.image}
-                      alt={p.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-110"
+                    <ImageGallery
+                      images={p.images}
+                      title={p.title}
+                      className="w-full h-full"
+                      objectPositions={p.objectPositions}
                     />
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent pointer-events-none" />
                     {/* Top tags */}
                     <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
                       <div className="flex items-center gap-2">

@@ -1,6 +1,7 @@
 import { Briefcase, Users, FlaskConical, ImageIcon } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { ImageGallery } from "./ImageGallery";
 
 type Item = {
   type: string;
@@ -11,7 +12,7 @@ type Item = {
   description: string;
   tools: string[];
   impact: string;
-  image?: string;
+  images?: string[];
 };
 
 const items: Item[] = [
@@ -26,6 +27,7 @@ const items: Item[] = [
     tools: ["P&ID", "DCS", "Flow Transmitter", "Calibration"],
     impact:
       "Learned how an instrumentation project moves from paperwork to a live, calibrated loop in a refinery environment.",
+    images: ["/pertamina3.jpeg"],
   },
   {
     type: "Lab Assistant",
@@ -38,6 +40,7 @@ const items: Item[] = [
     tools: ["LabVIEW", "Arduino", "Data Acquisition"],
     impact:
       "Strengthened my own grasp of control fundamentals by teaching them. Explaining a concept is the fastest way to truly own it.",
+    images: ["/labs4.jpeg", "/labs3.jpeg"],
   },
   {
     type: "Lab Assistant",
@@ -50,6 +53,7 @@ const items: Item[] = [
     tools: ["CODESYS", "PLC", "Festo MPS"],
     impact:
       "Deepened my understanding of PLC based control systems by teaching students how to build and debug automation sequences.",
+    images: ["/labs2.jpeg"],
   },
   {
     type: "Internship",
@@ -62,6 +66,7 @@ const items: Item[] = [
     tools: ["PLC", "Instrumentation", "PDCA", "Maintenance"],
     impact:
       "Got a first close up look at how automation actually keeps a continuous process plant running shift after shift.",
+    images: ["/bima.jpeg"],
   },
   {
     type: "Organization",
@@ -73,6 +78,7 @@ const items: Item[] = [
       "As Head of Sports Division at HIMATRO, I lead the Automation Futsal Cup which involved 24 participating schools. I supervise 8 staff members in executing departmental work programs, which has built my ability to lead a team, plan logistics, and deliver results under deadlines.",
     tools: ["Leadership", "Event Management", "Coordination"],
     impact: "Built my ability to lead a team, plan logistics, and deliver under deadlines.",
+    images: ["/himatro.jpeg"],
   },
   {
     type: "Organization",
@@ -84,6 +90,7 @@ const items: Item[] = [
       "As Head of External Diplomacy at IWAKMAS UNDIP, I build partnerships with external student organizations and manage collaborative projects. I also led a Mangrove Planting project with more than 100 volunteers in Semarang, which sharpened my cross team communication and stakeholder management skills.",
     tools: ["Partnerships", "Project Management", "Communication"],
     impact: "Sharpened cross team communication and stakeholder management.",
+    images: ["/iwakmas.jpeg"],
   },
 ];
 
@@ -106,8 +113,12 @@ export const Experience = () => {
               <article className="group relative h-full bg-surface-elevated border border-border rounded-2xl overflow-hidden card-hover flex flex-col">
                 <div className="relative aspect-[16/9] bg-gradient-to-br from-secondary to-surface border-b border-border grid place-items-center overflow-hidden">
                   <div className="absolute inset-0 grid-pattern opacity-30" aria-hidden />
-                  {it.image ? (
-                    <img src={it.image} alt={it.role} className="w-full h-full object-cover" loading="lazy" />
+                  {it.images && it.images.length > 0 ? (
+                    <ImageGallery 
+                      images={it.images} 
+                      title={it.role}
+                      className="w-full h-full"
+                    />
                   ) : (
                     <div className="relative flex flex-col items-center gap-2 text-muted-foreground">
                       <ImageIcon className="w-8 h-8 opacity-50" />

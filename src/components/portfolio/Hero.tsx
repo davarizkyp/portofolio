@@ -1,6 +1,5 @@
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profile from "@/assets/profile.jpg";
 
 export const Hero = () => {
   return (
@@ -66,26 +65,20 @@ export const Hero = () => {
         </div>
 
         <div className="md:col-span-2 fade-in fade-in-delay-2">
-          <div className="relative max-w-sm mx-auto">
+          <div className="relative max-w-md mx-auto">
             <div className="absolute -inset-6 bg-gradient-accent opacity-20 blur-3xl rounded-full" aria-hidden />
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-accent/40 via-transparent to-[hsl(var(--accent-warm)/0.4)]" aria-hidden />
 
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-border shadow-elevated bg-surface">
               <img
-                src={profile}
-                alt="Portrait of Dava Rizky Pratama"
+                src="/home.JPG"
+                alt="Home section illustration"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                width={768}
-                height={960}
+                loading="eager"
               />
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-mono text-[10px] text-muted-foreground tracking-widest flex flex-col items-center gap-2 fade-in fade-in-delay-5">
-        <span>SCROLL</span>
-        <span className="w-px h-8 bg-gradient-to-b from-accent to-transparent" />
       </div>
     </section>
   );
