@@ -19,13 +19,13 @@ const categories = [
     icon: Radio,
     title: "Industrial Communication",
     color: "accent",
-    items: ["Modbus RTU/TCP", "MQTT", "DCS Loops", "4-20 mA Signaling", "Hook-up Drawings"],
+    items: ["Modbus RTU/TCP", "MQTT", "DCS Loops", "4 to 20 mA Signaling", "Hookup Drawings"],
   },
   {
     icon: Monitor,
     title: "HMI & SCADA",
     color: "warm",
-    items: ["LabVIEW", "Festo MPS", "Delphi 7", "Real-time Monitoring", "Data Acquisition"],
+    items: ["LabVIEW", "Festo MPS", "Delphi 7", "Real time Monitoring", "Data Acquisition"],
   },
 ];
 
