@@ -16,7 +16,6 @@ const projects = [
       "The plant needed accurate slop oil mass balance measurement at Unit 23/24. I designed and integrated an orifice flowmeter system end to end, covering P&ID review, sizing per ISO 5167 and API MPMS, hookup drawings, and DCS signal loop integration.",
     tools: ["P&ID", "ISO 5167", "API MPMS", "DCS"],
     images: ["/pertamina1.jpeg", "/pertamina2.jpeg", "/pertamina4.jpeg"],
-    featured: true,
   },
   {
     year: "2026",
