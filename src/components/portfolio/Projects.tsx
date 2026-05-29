@@ -36,7 +36,7 @@ const projects = [
     description:
       "Developed a realtime control system using an ESP32 microcontroller programmed in C/C++ to regulate water level, temperature, and pH. Implemented a Finite State Machine and PID control algorithms for automated pH dosing using PWM peristaltic pumps. Integrated a Firebase database with a custom HTML, CSS, and JavaScript web dashboard for live data visualization and remote manual control, while utilizing the Telegram API specifically for critical system notifications.",
     tools: ["ESP32", "C/C++", "PID", "Firebase", "Telegram API", "FSM"],
-    images: ["/dashboard1.png", "/dashboard2.png", "/hidroponik.jpeg"],
+    images: ["/dashboard1.png", "/dashboard2.png", "/hidroponik.jpeg", "/telegram.jpeg"],
   },
   {
     year: "2026",
