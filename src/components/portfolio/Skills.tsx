@@ -19,7 +19,7 @@ const categories = [
     icon: Radio,
     title: "Industrial Communication",
     color: "accent",
-    items: ["Modbus RTU/TCP", "MQTT", "HTTP", "DCS Loops", "4 to 20 mA Signaling", "Hookup Drawings"],
+    items: ["Modbus RTU/TCP", "MQTT", "HTTP", "EtherCAT", "PROFINET", "OPC UA"],
   },
   {
     icon: Monitor,

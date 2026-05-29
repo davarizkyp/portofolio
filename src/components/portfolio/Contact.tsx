@@ -12,8 +12,8 @@ const contacts = [
   {
     icon: Mail,
     label: "Email",
-    value: "dava84984@gmail.com",
-    href: "mailto:dava84984@gmail.com",
+    value: "davarizkypratama@students.undip.ac.id",
+    href: "mailto:davarizkypratama@students.undip.ac.id",
   },
   {
     icon: Linkedin,
@@ -50,7 +50,7 @@ export const Contact = () => {
       const body = encodeURIComponent(
         `From: ${fd.get("name")} <${fd.get("email")}>\n\n${fd.get("message")}`
       );
-      window.location.href = `mailto:dava84984@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:davarizkypratama@students.undip.ac.id?subject=${subject}&body=${body}`;
       f.reset();
     }, 600);
   };
