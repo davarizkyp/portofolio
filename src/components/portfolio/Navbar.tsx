@@ -48,7 +48,7 @@ export const Navbar = () => {
 
         <div className="hidden md:block">
           <Button size="sm" asChild className="bg-gradient-accent border-0 hover:opacity-90 shadow-glow">
-            <a href="/cv.pdf" download>Download CV</a>
+            <a href="/CV%20Dava%20Rizky%20Pratama_Universitas%20Diponegoro.pdf" download>Download CV</a>
           </Button>
         </div>
 
@@ -75,7 +75,7 @@ export const Navbar = () => {
               </a>
             ))}
             <Button size="sm" asChild className="bg-gradient-accent border-0">
-              <a href="/cv.pdf" download>Download CV</a>
+              <a href="/CV%20Dava%20Rizky%20Pratama_Universitas%20Diponegoro.pdf" download>Download CV</a>
             </Button>
           </div>
         </div>

@@ -52,7 +52,7 @@ export const Hero = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild className="hover-lift glass">
-              <a href="/cv.pdf" download>
+              <a href="/CV%20Dava%20Rizky%20Pratama_Universitas%20Diponegoro.pdf" download>
                 <Download className="mr-1 w-4 h-4" /> Download CV
               </a>
             </Button>
