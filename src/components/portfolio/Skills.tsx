@@ -1,4 +1,4 @@
-import { Cpu, Monitor, Zap, Radio, Wrench, Code2 } from "lucide-react";
+import { Cpu, Monitor, Zap, Radio, Wrench, Code2, Wifi } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
@@ -10,22 +10,28 @@ const categories = [
     items: ["PLC Programming", "PID Control", "PWM", "Embedded C/C++", "Python", "MATLAB Simulink"],
   },
   {
-    icon: Zap,
-    title: "Electrical Design",
+    icon: Wifi,
+    title: "IoT & Web Development",
     color: "warm",
-    items: ["Schematic Design", "Power Electronics", "EasyEDA", "Proteus", "PSIM", "Wiring Diagrams"],
+    items: ["JavaScript", "HTML/CSS", "Node-RED", "Firebase", "ESP32", "MQTT Protocol", "Computer Vision"],
   },
   {
     icon: Radio,
     title: "Industrial Communication",
     color: "accent",
-    items: ["Modbus RTU/TCP", "MQTT", "DCS Loops", "4 to 20 mA Signaling", "Hookup Drawings"],
+    items: ["Modbus RTU/TCP", "MQTT", "HTTP", "DCS Loops", "4 to 20 mA Signaling", "Hookup Drawings"],
   },
   {
     icon: Monitor,
     title: "HMI & SCADA",
     color: "warm",
     items: ["LabVIEW", "Festo MPS", "Delphi 7", "Real time Monitoring", "Data Acquisition"],
+  },
+  {
+    icon: Zap,
+    title: "Electrical Design",
+    color: "accent",
+    items: ["Schematic Design", "Power Electronics", "EasyEDA", "Proteus", "PSIM", "Wiring Diagrams"],
   },
 ];
 
@@ -39,6 +45,8 @@ const tools = [
   { name: "Simulink", cat: "Sim" },
   { name: "Arduino IDE", cat: "Embed" },
   { name: "STM32CubeIDE", cat: "Embed" },
+  { name: "STM32CubeMX", cat: "Embed" },
+  { name: "VS Code", cat: "Code" },
   { name: "SolidWorks", cat: "CAD" },
   { name: "Proteus", cat: "EE" },
   { name: "EasyEDA", cat: "EE" },
@@ -46,6 +54,9 @@ const tools = [
   { name: "Fluidsim", cat: "Sim" },
   { name: "Python", cat: "Code" },
   { name: "C++", cat: "Code" },
+  { name: "JavaScript", cat: "Web" },
+  { name: "Node-RED", cat: "IoT" },
+  { name: "Firebase", cat: "Cloud" },
   { name: "Delphi 7", cat: "HMI" },
 ];
 

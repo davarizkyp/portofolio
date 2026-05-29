@@ -1,4 +1,4 @@
-import { ArrowUpRight, Cpu, Gauge, Thermometer, Activity, RotateCw } from "lucide-react";
+import { ArrowUpRight, Cpu, Gauge, Thermometer, Activity, RotateCw, Wifi, Droplets, Hand } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 import { ImageGallery } from "./ImageGallery";
@@ -17,6 +17,36 @@ const projects = [
     tools: ["P&ID", "ISO 5167", "API MPMS", "DCS"],
     images: ["/pertamina1.jpeg", "/pertamina2.jpeg", "/pertamina4.jpeg"],
     featured: true,
+  },
+  {
+    year: "2026",
+    icon: Wifi,
+    category: "IoT System",
+    title: "IoT Based Temperature and Humidity Monitoring System",
+    description:
+      "Developed an IoT monitoring system utilizing an ESP microcontroller and a DHT11 sensor to transmit realtime environmental data via the MQTT protocol. Integrated Node-RED as a middleware pipeline to process MQTT topics and execute HTTP requests for secure Firebase database storage, and designed an interactive web-based dashboard using HTML, CSS, and JavaScript for realtime data visualization.",
+    tools: ["ESP32", "DHT11", "MQTT", "Node-RED", "Firebase", "JavaScript"],
+    images: ["/dashboard dht11.jpeg", "/dht11.jpeg"],
+  },
+  {
+    year: "2026",
+    icon: Droplets,
+    category: "IoT Control",
+    title: "Automated IoT Hydroponic System",
+    description:
+      "Developed a realtime control system using an ESP32 microcontroller programmed in C/C++ to regulate water level, temperature, and pH. Implemented a Finite State Machine and PID control algorithms for automated pH dosing using PWM peristaltic pumps. Integrated a Firebase database with a custom HTML, CSS, and JavaScript web dashboard for live data visualization and remote manual control, while utilizing the Telegram API specifically for critical system notifications.",
+    tools: ["ESP32", "C/C++", "PID", "Firebase", "Telegram API", "FSM"],
+    images: ["/dashboard1.png", "/dashboard2.png", "/hidroponik.jpeg"],
+  },
+  {
+    year: "2026",
+    icon: Hand,
+    category: "Computer Vision",
+    title: "Computer Vision Based PLC Control via Modbus TCP",
+    description:
+      "Developed a gesture controlled system using MediaPipe computer vision to detect hand movements from a webcam. Used the Modbus TCP protocol to send write coil commands based on finger positions, controlling a Schneider PLC over a local network. Built a custom Python GUI to display live video feeds, system logs, and manual controls, ensuring smooth communication between the software and hardware.",
+    tools: ["Python", "MediaPipe", "Modbus TCP", "Schneider PLC", "OpenCV"],
+    images: ["/gui.png", "/modbus.jpeg"],
   },
   {
     year: "2025",
